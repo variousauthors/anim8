@@ -262,6 +262,11 @@ function Animation:resume()
   self.status = "playing"
 end
 
+function Animation:setFlipped(bool)
+    self.flippedH = bool
+    return self
+end
+
 function Animation:draw(image, x, y, r, sx, sy, ox, oy, ...)
   local frame = self.frames[self.position]
   if self.flippedH or self.flippedV then
